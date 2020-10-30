@@ -1,0 +1,59 @@
+/*
+column-count - Especifica o número de colunas em que um elemento deve ser dividido.
+column-count: number|auto|initial|inherit;
+
+column-fill - Especifica como preencher colunas, balanceadas ou não.
+column-fill: balance|auto|initial|inherit;
+
+column-gap - Especifica o gap entre as colunas. Nota: Se houver uma column-rule entre as colunas, ela aparecerá no meio do espaço.
+column-gap: length|normal|initial|inherit;
+
+column-rule - Uma propriedade abreviada de todas as colunas-rule- * propriedades. column-rule-style (required)
+column-rule: column-rule-width column-rule-style column-rule-color|initial|inherit;
+
+column-rule-color - Especifica a cor da regra entre as colunas.
+column-rule-color: color|initial|inherit;
+
+column-rule-style - Especifica o estilo da regra entre colunas.
+column-rule-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+
+column-rule-width - Especifica a largura da regra entre as colunas.
+column-rule-width: medium|thin|thick|length|initial|inherit;
+
+column-span - Especifica quantas colunas um elemento deve se estender.
+column-span: none|all|initial|inherit;
+
+column-width - Especifica a largura da coluna.é uma propriedade flexível,uma sugestão de largura mínima para o navegador.
+column-width: auto|length|initial|inherit;
+
+columns - Uma propriedade abreviada para column-width e column-count.
+columns: auto|column-width column-count|initial|inherit;
+*/
+
+p {
+    width: 800px;
+    height: 500px;
+    border: 1px solid #000000;
+    text-align: justify;
+    padding: 10px;
+
+    columns: 0px 3;
+    /* column-width: 0px;
+    column-count: 3; */
+
+    column-gap: 50px;
+
+    column-rule: 5px solid tomato;
+    /* column-rule-width: 5px;
+    column-rule-style: solid;
+    column-rule-color: tomato; */
+
+    /* column-fill: auto; */
+
+
+}
+
+p a {
+    column-span: all;
+    display: block;
+  }

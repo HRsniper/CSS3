@@ -1,0 +1,122 @@
+/* 
+grid =→ Uma propriedade abreviada para as propriedades de grid-template-rows, 
+grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, e grid-auto-flow.
+    grid: none ||| grid-template-rows / grid-template-columns ||| grid-template-areas ||| 
+    grid-template-rows / [grid-auto-flow] grid-auto-columns ||| 
+    [grid-auto-flow] grid-auto-rows / grid-template-columns ||| initial ||| inherit;
+
+grid-area =→ Especifica um nome para o item da grade ou essa propriedade é uma propriedade 
+abreviada das propriedades grid-row-start, grid-column-start, grid-row-end, e grid-column-end.
+    grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end | itemname;
+
+grid-auto-columns =→ Especifica um tamanho de coluna padrão.
+    grid-auto-columns: auto|max-content|min-content|minmax(min.max)|length|%;
+
+grid-auto-flow =→ Especifica como os itens colocados automaticamente são inseridos na grade.
+    grid-auto-flow: row|column|dense|row dense|column dense;
+
+grid-auto-rows =→ Especifica um tamanho de linha padrão.
+    grid-auto-rows: auto|max-content|min-content|length|%;
+
+grid-column =→ Uma propriedade abreviada das propriedades grid-column-start e grid-column-end.
+    grid-column: grid-column-start / grid-column-end;
+
+grid-column-end =→ Especifica onde finalizar o item da grade.
+    grid-column-end: auto|span n|column-line;
+
+grid-column-gap =→ Especifica o tamanho do intervalo entre colunas.
+    grid-column-gap: length;
+
+grid-column-start Especifica onde iniciar o item da grade.
+    grid-column-start: auto|span n|column-line;
+
+grid-gap =→ Uma propriedade abreviada das propriedades grid-row-gap e grid-column-gap.
+    grid-gap: grid-row-gap grid-column-gap;
+
+grid-row =→ Uma propriedade abreviada das propriedades grid-row-start e grid-row-end.
+    grid-row: grid-row-start / grid-row-end;
+
+grid-row-end =→ Especifica onde finalizar o item da grade.
+    grid-row-end: auto|row-line|span n;
+
+grid-row-gap =→ Especifica o tamanho do espaço entre as linhas.
+    grid-row-gap: length;
+
+grid-row-start =→ Especifica onde iniciar o item da grade.
+    grid-row-start: auto|row-line;
+
+grid-template =→ Uma propriedade abreviada das propriedades grid-template-rows, 
+grid-template-columns e grid-template-areas.
+    grid-template: none|grid-template-rows / grid-template-columns|grid-template-areas|initial|inherit;
+
+grid-template-areas =→ Especifica como exibir colunas e linhas, usando itens de grade nomeados.
+    grid-template-areas: none|"itemnames";
+
+grid-template-columns =→ Especifica o tamanho das colunas e quantas colunas em um layout de grade.
+    grid-template-columns: none|auto|max-content|min-content|length|initial|inherit;
+
+grid-template-rows =→ Especifica o tamanho das linhas em um layout de grade.
+    grid-template-rows: none|auto|max-content|min-content|length|initial|inherit;
+
+*/
+
+.grid-container {
+    display: grid;
+    height: 50vh;
+
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 20px 10px;
+    /* column-gap: 10px; */
+    /* row-gap: 20px; */
+}
+
+.grid-container .p0 {
+    /* grid-column: auto auto auto; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+div {
+    border: 1px solid #000000;
+}
+
+.grid-container div:nth-child(even) {
+    background-color: #949494;
+}
+
+.grid-container2 {
+    display: grid;
+    height: 50em;
+
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "header header header header header header header"
+        "asidee . Main Main Main . asided"
+        "footer footer footer footer footer footer footer";
+
+    /* grid-template-columns: 1fr repeat(3, 10px, 1fr); */
+    grid-template-columns: auto 5px auto auto auto 5px auto;
+    row-gap: 10px;
+}
+
+.grid-container2 .p0 {
+    grid-area: header;
+}
+.grid-container2 .p1 {
+    grid-area: asidee;
+}
+.grid-container2 .p2 {
+    grid-area: Main;
+}
+.grid-container2 .p3 {
+    grid-area: asided;
+}
+.grid-container2 .p4 {
+    grid-area: footer;
+}
+
+.grid-container2 div:nth-child(even) {
+    background-color: #949494;
+}

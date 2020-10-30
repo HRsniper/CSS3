@@ -1,0 +1,107 @@
+/*
+inline:  exibe um elemento como um elemento inline (como <span>).
+Quaisquer propriedades de altura e largura não terão efeito.
+
+block:  exibe um elemento como um elemento de bloco (como <p>).
+Começa em uma nova linha e ocupa toda a largura.
+
+contents:  Faz com que o contêiner desapareça, tornando os elementos filhos,
+filhos do elemento no próximo nível no DOM.
+
+flex:  exibe um elemento como um contêiner flexível no nível do bloco.
+
+grid:  exibe um elemento como um contêiner de grade no nível do bloco.
+
+inline-block: exibe um elemento como um contêiner de bloco no nível linha.
+O próprio elemento é formatado como um elemento linha, mas você pode aplicar valores de altura e largura.
+
+inline-flex: exibe um elemento como um contêiner flexível no nível de linha.
+
+inline-grid: exibe um elemento como um contêiner de grade no nível de linha.
+
+inline-block: o elemento é exibido como uma tabela no nível de linha.
+
+list-item: deixe o elemento se comportar como um elemento <li>.
+
+run-in: exibe um elemento como bloco ou linha, dependendo do contexto.
+
+table: deixe o elemento se comportar como um elemento <table>.
+
+table-caption: deixe o elemento se comportar como um elemento <caption>.
+
+table-column-group: deixe o elemento se comportar como um elemento <colgroup>.
+
+table-header-group: deixe o elemento se comportar como um elemento <thead>.
+
+table-footer-group: deixe o elemento se comportar como um elemento <tfoot>.
+
+table-row-group: deixe o elemento se comportar como um elemento <tbody>.
+
+table-cell: deixe o elemento se comportar como um elemento <td>.
+
+table-column: deixe o elemento se comportar como um elemento <col>.
+
+table-row: deixe o elemento se comportar como um elemento <tr>.
+
+none: o elemento foi completamente removido.
+
+initial: define essa propriedade como seu valor padrão.
+
+inherit: herda essa propriedade de seu elemento pai.
+*/
+span, div {
+    border: 1px solid #000000;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.span5 {
+    display: block;
+}
+
+.div5 {
+    display: inline;
+}
+
+.span4, .div4 {
+    display: inline-block;
+}
+
+.span2, .div2 {
+    display: none;
+}
+
+.div6 {
+    width: 100px;
+    height: 100px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    /* somente com table-cell */
+    /* line-height: 100px; tambem centaliza o texto verticalmente com msm valor da altura */
+}
+
+
+ol, ul, li {
+    border: 1px solid #000000;
+    /* margin: 0; */
+    padding: 0;
+}
+
+ol {
+    display: table;
+    width: 250px;
+    height: 100px;
+}
+
+ul {
+    display: table-row;
+}
+
+li {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+

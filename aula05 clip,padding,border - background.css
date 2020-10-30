@@ -1,0 +1,61 @@
+.div1 , #div2 , #div3 {
+    border: 10px dotted #000000;
+    /* padding: 30px; */
+    padding: 15px 110px 50px 230px;
+    background-color: bisque;
+    
+}
+
+.div1 {
+    background-clip: border-box;
+}
+
+#div2 {
+    background-clip: padding-box;
+}
+
+#div3 {
+    background-clip: content-box;
+}
+
+
+
+
+
+/*
+border:
+Valor               Descrição
+border-width:       especifica a largura da borda. O valor padrão é "medium"
+border-style:       especifica o estilo da borda. O valor padrão é "none", linha sólida(solid), pontilhada(dotted)
+border-color:       especifica a cor da borda. O valor padrão é a cor do texto
+initial:            define essa propriedade como seu valor padrão.
+inherit:            herda essa propriedade de seu elemento pai.
+
+padding:
+colocando 1 valor os 4 cantos sao os msm, colocando os 4 assim 12px 2px 12px 2px sao os 4catos diferentees
+Valor               Descrição
+length:             especifica o preenchimento em px, pt, cm, etc. O valor padrão é 0.
+%:                  Especifica o preenchimento em porcentagem da largura do elemento que contém.
+initial:            define essa propriedade como seu valor padrão.
+inherit:            herda essa propriedade de seu elemento pai.
+
+background-clip:
+Valor               Descrição
+border-box:         valor padrão. O fundo se estende para além da fronteira
+padding-box:        o fundo se estende até a borda interna da borda
+content-box:        o plano de fundo se estende até a borda da caixa de conteúdo
+initial:            define essa propriedade como seu valor padrão.
+inherit:            herda essa propriedade de seu elemento pai.
+
+Valor                   Descrição
+background-color:       Especifica a cor de fundo a ser usada.
+background-image:       Especifica UMA ou MAIS imagens de fundo a serem usadas.(varias funçoes)
+background-position:    Especifica a posição das imagens de fundo.(varias funçoes)
+background-size:        Especifica o tamanho das imagens de fundo.(varias funçoes)
+background-repeat:      Especifica como repetir as imagens de fundo.(varias funçoes)
+background-origin:      Especifica a área de posicionamento das imagens de fundo.
+background-clip:        Especifica a área de pintura das imagens de fundo.(varias funçoes)
+background-attachment:  Especifica se as imagens de segundo plano são fixas ou rolam com o restante da página.
+initial:                Define essa propriedade como seu valor padrão.
+inherit:                Herda essa propriedade de seu elemento pai.
+*/

@@ -1,0 +1,135 @@
+/*
+A regra @media é usada em consultas de mídia para aplicar estilos diferentes para diferentes 
+    tipos/dispositivos de mídia.
+As consultas de mídia podem ser usadas para verificar várias coisas, como:
+    * largura e altura da janela de visualização
+    * largura e altura do dispositivo
+    * orientação (se o tablet/telefone está no modo paisagem ou retrato?)
+    * resolução
+O uso de consultas de mídia é uma técnica popular para fornecer uma folha de estilo personalizada
+    (design responsivo da web) para desktops, laptops, tablets e telefones celulares.
+Você também pode usar consultas de mídia para especificar que determinados estilos são apenas 
+    para documentos impressos ou para leitores de tela (mediatype: print, screen, or speech).
+Além dos tipos de mídia, também existem recursos de mídia. Recursos de mídia fornecem detalhes
+    mais específicos para consultas de mídia, permitindo testar um recurso específico do 
+    agente do usuário ou dispositivo de exibição. Por exemplo, você pode aplicar estilos 
+    apenas às telas maiores ou menores que uma determinada largura.
+
+@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+  CSS-Code;
+}
+
+significado das palavras-chave not, only e and:
+    not: a palavra-chave not reverte o significado de uma consulta de mídia inteira.
+    only: a única palavra-chave impede que navegadores mais antigos que não suportam 
+    consultas de mídia com recursos de mídia apliquem os estilos especificados. 
+    Não tem efeito nos navegadores modernos.
+and: A palavra-chave e combina um recurso de mídia com um tipo de mídia
+    ou outros recursos de mídia.
+
+Eles são todos opcionais. No entanto, se você usar not ou only, também deverá 
+    especificar um mediatype (tipo de mídia).
+
+Você também pode ter diferentes folhas de estilo para diferentes mídias, como este:
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+*/
+/* 
+MediaType ->
+    all - Padrão. Usado para todos os dispositivos do tipo de mídia.
+    print - Usado para impressoras.
+    screen- Usado para telas de computador, tablets, smartphones etc.
+    speech- Usado para leitores de tela que "lêem" a página.
+*/
+/* 
+MediaFeature ->
+any-hover-	Does any available input mechanism allow the user to hover over elements? (added in Media Queries Level 4)
+any-pointer-	Is any available input mechanism a pointing device, and if so, how accurate is it? (added in Media Queries Level 4)
+aspect-ratio-	The ratio between the width and the height of the viewport
+color-	The number of bits per color component for the output device
+color-gamut-	The approximate range of colors that are supported by the user agent and output device (added in Media Queries Level 4)
+color-index-	The number of colors the device can display
+grid-	Whether the device is a grid or bitmap
+height-	The viewport height
+hover-	Does the primary input mechanism allow the user to hover over elements? (added in Media Queries Level 4)
+inverted-colors-	Is the browser or underlying OS inverting colors? (added in Media Queries Level 4)
+light-level-	Current ambient light level (added in Media Queries Level 4)
+max-aspect-ratio-	The maximum ratio between the width and the height of the display area
+max-color-	The maximum number of bits per color component for the output device
+max-color-index-	The maximum number of colors the device can display
+max-height-	The maximum height of the display area, such as a browser window
+max-monochrome-	The maximum number of bits per "color" on a monochrome (greyscale) device
+max-resolution-	The maximum resolution of the device, using dpi or dpcm
+max-width-	The maximum width of the display area, such as a browser window
+min-aspect-ratio-	The minimum ratio between the width and the height of the display area
+min-color-	The minimum number of bits per color component for the output device
+min-color-index-	The minimum number of colors the device can display
+min-height-	The minimum height of the display area, such as a browser window
+min-monochrome-	The minimum number of bits per "color" on a monochrome (greyscale) device
+min-resolution-	The minimum resolution of the device, using dpi or dpcm
+min-width-	The minimum width of the display area, such as a browser window
+monochrome-	The number of bits per "color" on a monochrome (greyscale) device
+orientation-	The orientation of the viewport (landscape or portrait mode)
+overflow-block-	How does the output device handle content that overflows the viewport along the block axis (added in Media Queries Level 4)
+overflow-inline-	Can content that overflows the viewport along the inline axis be scrolled (added in Media Queries Level 4)
+pointe-r	Is the primary input mechanism a pointing device, and if so, how accurate is it? (added in Media Queries Level 4)
+resolution-	The resolution of the output device, using dpi or dpcm
+scan-	The scanning process of the output device
+scripting-	Is scripting (e.g. JavaScript) available? (added in Media Queries Level 4)
+update-	How quickly can the output device modify the appearance of the content (added in Media Queries Level 4)
+width-	The viewport width
+
+max-width é a largura da área de exibição de alvo, por exemplo, o navegador.
+
+max-device-width é a largura de toda a área de renderização do dispositivo, ou seja, a tela do dispositivo real.
+*/
+body {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    width: 110px;
+    float: left;
+    text-align: center;
+}
+nav li {
+        list-style-type: none;
+        /* width: 110px; */
+        background: hsl(255, 25%, 50%);
+        color: white;
+        margin: 5px;
+        padding: 5px;
+    }
+
+article {
+    margin-left: 120px;
+}
+
+@media screen and (min-width:0px) and (max-width:425px) {
+    nav {
+        width: 100%;
+        margin-left: -20px;
+    }
+    article {
+        margin-left: 50px;
+    }
+}
+@media screen and (min-width:426px) and (max-width:1024px) {
+    body {
+        background-color: hsl(0, 10%, 50%);
+    }
+
+    article div {
+        float: left;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1920px) {
+    body {
+        background: rgba(255, 99, 71, 0.664);
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1920px)
+    and (min-height:1080px) {
+    body {
+        background: rgba(102, 81, 78, 0.664);
+    }
+}

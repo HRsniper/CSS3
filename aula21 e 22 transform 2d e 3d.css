@@ -1,0 +1,151 @@
+/* 
+transform-origin: permite alterar a posição nos elementos transformados.
+Nota: Esta propriedade deve ser usada junto com a propriedade transform.
+transform-origin: x-axis y-axis z-axis|initial|inherit;
+
+x-axis: define onde a vista é colocada no eixo x. Valores possíveis:
+left    center    right    length    %
+y-axis: define onde a vista é colocada no eixo y. Valores possíveis:
+top    center    botton    length    %
+z-axis: define onde a vista é colocada no eixo y (para transformações 3D). Valores possíveis:
+length    %
+initial: define essa propriedade como seu valor padrão.
+inherit: herda essa propriedade de seu elemento pai.
+*/
+
+/*
+transform-style: especifica como os elementos aninhados são renderizados no espaço 3D.
+Nota: Esta propriedade deve ser usada junto com a propriedade transform.
+transform-style: flat|preserve-3d|initial|inherit;
+
+flat: especifica que os elementos filhos NÃO preservarão sua posição 3D. Isso é o padrão.
+preserve-3d: especifica que os elementos filhos preservarão sua posição 3D.
+initial: define essa propriedade como seu valor padrão.
+inherit: herda essa propriedade de seu elemento pai.
+*/
+
+/*
+A transform propriedade aplica uma transformação 2D ou 3D a um elemento.
+    transform: none|transform-functions|initial|inherit;
+
+none:   define que não deve haver transformação.
+O matrix método combina todos os métodos de transformação 2D ou 3D em um.
+matrix (n, n, n, n, n, n):   define uma transformação 2D, usando uma matriz de seis valores.
+matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())
+
+matrix3d (n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n):   Define uma transformação 3D, usando uma matriz 4x4 de 16 valores.
+
+translate (x, y):   define uma tradução(mover) 2D.
+translate3d (x, y, z):   define uma tradução(mover) 3D.
+translateX (x): define uma tradução(mover), usando apenas o valor para o eixo X.
+translateY (y): define uma tradução(mover), usando apenas o valor para o eixo Y.
+translateZ (z): define uma tradução(mover), usando apenas o valor para o eixo Z.
+scale (x, y): define uma transformação de escala 2D.
+scale3d (x, y, z): define uma transformação de escala 3D.
+scaleX (x): define uma transformação de escala fornecendo um valor para o eixo X.
+scaleY (y): define uma transformação de escala, fornecendo um valor para o eixo Y.
+scaleZ (z): define uma transformação de escala 3D, fornecendo um valor para o eixo Z.
+rotate (angle): define uma rotação 2D, o ângulo é especificado no parâmetro.
+rotate3d (x, y, z, angle): define uma rotação 3D.
+rotateX (angle): define uma rotação 3D ao longo do eixo X.
+rotateY (angle): define uma rotação 3D ao longo do eixo Y.
+rotateZ (angle): define uma rotação 3D ao longo do eixo Z.
+skew (angle x, angle y): define uma transformação de inclinação 2D ao longo dos eixos X e Y.
+skewX (angle): define uma transformação de inclinação 2D ao longo do eixo X.
+skewY (angle): Define uma transformação de inclinação 2D ao longo do eixo Y.
+perspective (n): define uma vista em perspectiva para um elemento transformado em 3D.
+initial: define essa propriedade como seu valor padrão.
+inherit: herda essa propriedade de seu elemento pai. 
+*/
+
+/*
+A backface-visibilitypropriedade define se a face traseira de um elemento deve ou não estar visível ao enfrentar o usuário.
+A face traseira de um elemento é uma imagem em espelho da face frontal que está sendo exibida.
+Esta propriedade é útil quando um elemento é girado. Permite escolher se o usuário deve ver a face traseira ou não.
+backface-visibility: visible|hidden|initial|inherit;
+
+visible: valor padrão. A parte traseira é visível.
+hidden: a parte traseira não é visível.
+initial: define essa propriedade como seu valor padrão.
+inherit: herda essa propriedade de seu elemento pai. 
+*/
+/*
+A perspective propriedade é usada para dar uma perspectiva ao elemento posicionado em 3D.
+A perspective propriedade define a que distância o objeto está do usuário. 
+Portanto, um valor mais baixo resultará em um efeito 3D mais intenso que um valor mais alto.
+Ao definir a perspectivepropriedade para um elemento, são os elementos CHILD que obtêm a vista em perspectiva, NÃO o próprio elemento.
+a perpectiva é aplicada ao container do elemento.
+perspective: length|none|initial|inherit;
+
+length: quão longe o elemento é colocado da vista.
+none: valor padrão. Igual a 0. A perspectiva não está definida.
+initial: define essa propriedade como seu valor padrão.
+inherit: herda essa propriedade de seu elemento pai.
+*/
+/*
+A perspective-origin propriedade define em qual posição o usuário está olhando para o elemento posicionado em 3D.
+Ao definir a perspective-origin propriedade para um elemento, são os elementos CHILD que obterão o efeito, NÃO o próprio elemento.
+Nota: Esta propriedade deve ser usada em conjunto com a propriedade perspective !
+a perpectiva é aplicada ao container do elemento.
+perspective-origin: x-axis y-axis|initial|inherit;
+
+x-axis: define onde a vista é colocada no eixo x. Valores possíveis:
+left    center    right    length    %    padrão:50%
+y-axis: define onde a vista é colocada no eixo y. Valores possíveis:
+top    center    botton    length    %    padrão:50%
+initial: define essa propriedade como seu valor padrão.
+inherit: herda essa propriedade de seu elemento pai.
+*/
+div {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: antiquewhite;
+}
+
+.d2Dv1:hover {
+    transform: translate(20px, 10px); /* 2d */
+}
+.d2Dv2:hover {
+    transform: rotate(50deg); /* 2d */
+} 
+.d2Dv3:hover {
+    transform: scale(2); /* 2d */ /* 1,2,3... dropa / 0.5... diminui */
+}
+.d2Dv4:hover {
+    transform: skewX(25deg); /* 2d */ /* horizontal */
+}
+.d2Dv5:hover {
+    transform: skewY(25deg); /* 2d */ /* vertical */
+}
+.d2Dv6:hover {
+    transform: skew(25deg,25deg); /* 2d */
+}
+.d2Dv7:hover {
+    transform: matrix(2,0,0.5,2,0,0); /* 2d */
+}
+
+.bgcolor {
+    background-color: aquamarine;
+}
+.d3Dv1:hover {
+    transform: rotateY(180deg); /* 3d */
+    transition: 0.2s; 
+}
+.d3Dv2:hover {
+    transform: translateY(30px); /* 3d */
+}
+.d3Dv3:hover {
+    transform: rotateY(180deg); /* 3d */
+    transition: 1s; 
+    backface-visibility: hidden; /* 3d */
+}
+section {
+    perspective: 300px;
+}
+.d3Dv4:hover {
+    transform: rotateY(180deg); /* 3d */
+    transition: 1s;
+    transform-origin: right;
+}

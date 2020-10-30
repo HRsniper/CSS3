@@ -1,0 +1,78 @@
+/* 
+position:    A propriedade position especifica o tipo de método de posicionamento usado para um elemento (estático, relativo, absoluto, fixo ou pegajosa).
+position: static|absolute|fixed|relative|sticky|initial|inherit;
+
+static- Valor padrão. Os elementos são renderizados em ordem, conforme aparecem no fluxo do documento.
+absolute- O elemento é posicionado em relação ao seu primeiro elemento pai posicionado (não estático).
+fixed - O elemento é posicionado em relação à janela do navegador.
+relative - O elemento é posicionado em relação à sua posição normal, então "left: 20px" adiciona 20 pixels à posição ESQUERDA do elemento.
+sticky - O elemento é posicionado com base na posição de rolagem do usuário.
+Um elemento adesivo alterna entre relativo e fixo, dependendo da posição de rolagem. É posicionado em relação até que uma determinada posição de deslocamento seja alcançada na janela de visualização - então "gruda" no lugar (como posição: fixa).
+
+A propriedade  z-index especifica a ordem da pilha de um elemento.
+Um elemento com maior ordem de pilha está sempre na frente de um elemento com uma ordem de pilha menor.
+Nota: z-index funciona apenas em elementos posicionados (position: absolute, position: relative, position: fixed, or position: sticky).
+z-index: auto|number|initial|inherit;
+
+A top e botton propriedade afeta a posição vertical de um elemento posicionado. Esta propriedade não tem efeito em elementos não posicionados.
+top: auto|length|%|initial|inherit;
+botton: auto|length|%|initial|inherit;
+A left e right propriedade afeta a posição horizontal de um elemento posicionado. Esta propriedade não tem efeito em elementos não posicionados.
+left: auto|length|%|initial|inherit;
+right: auto|length|%|initial|inherit;
+
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: 1px solid #000000;
+    background-color: antiquewhite;
+}
+
+.d0 {
+    width: 800px;
+    height: 1800px;
+    background-color: steelblue;
+    /* position: static; padrão */
+}
+
+.d1 , .d2 , .d3 , .d4, .d5 , .d6{
+    width: 100px;
+    height: 100px;
+}
+
+.d1 {
+    /* position: absolute; */
+    /* position: relative; */
+}
+
+.d2 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.d3 {
+    position: fixed;
+    left: 300px;
+    top: -5px;
+}
+
+.d4 {
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+}
+.d5 {
+    position: absolute;
+    top: 190px;
+}
+
+.d6 {
+    position: sticky;
+    left: 500px;
+}

@@ -1,0 +1,74 @@
+/*
+font:	uma propriedade abreviada das propriedades de font-style, font-variant, font-weight, font-size/line-height, e as propriedades do font-family.
+font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;
+
+font-family: especifica a família de fontes do texto.
+font-family: family-name|generic-family|initial|inherit;
+
+@font-face: uma regra que permite que sites baixem e usem fontes diferentes das fontes "seguras para a web".
+@font-face {src: ;  font-family: ;  font-stretch: ;  font-style: ;  font-weight: ;  unicode-range: ;}
+
+font-feature-settings: Permite o controle sobre recursos tipográficos avançados em fontes OpenType.
+font-feature-settings: normal|feature-value;
+
+@ font-feature-values: permite que os autores usem um nome comum em font-variant-alternate para o recurso ativado diferentemente no OpenType.
+
+font-kerning: controla o uso das informações de kerning (como as letras são espaçadas).
+font-kerning: auto|normal|none;
+
+font-language-override: controla o uso de glifos específicos do idioma em um tipo de letra.
+
+font-size: especifica o tamanho da fonte do texto.
+font-size:medium|xx-small|x-small|small|large|%|x-large|xx-large|smaller|larger|length|initial|inherit;
+
+font-size-adjust: preserva a legibilidade do texto quando ocorre o fallback da fonte.
+font-size-adjust: number|none|initial|inherit;
+
+font-stretch: seleciona uma face normal, condensada ou expandida de uma família de fontes.
+font-stretch: ultra-condensed|extra-condensed|condensed|semi-condensed|normal|semi-expanded|expanded|extra-expanded|ultra-expanded|initial|inherit;
+
+font-style: especifica o estilo da fonte do texto.
+font-style: normal|italic|oblique|initial|inherit;
+
+font-synthesis: Controla quais tipos de letra ausentes (negrito ou itálico) podem ser sintetizados pelo navegador.
+
+font-variant: especifica se um texto deve ou não ser exibido em uma fonte com letras maiúsculas.
+font-variant: normal|small-caps|initial|inherit;
+
+font-variant-alternates: controla o uso de glifos alternativos associados a nomes alternativos definidos em @ font-feature-values.
+
+font-variant-caps: controla o uso de glifos alternativos para letras maiúsculas.
+font-variant-caps: normal|small-caps|all-small-caps|petite-caps|all-petite-caps|unicase|titling-caps|initial|inherit|unset;
+
+font-variant-east-asian: controla o uso de glifos alternativos para scripts do Leste Asiático (por exemplo, japonês e chinês).
+
+font-variant-ligatures: controla quais ligaduras e formas contextuais são usadas no conteúdo textual dos elementos aos quais se aplica.
+
+font-variant-numeric:	controla o uso de glifos alternativos para números, frações e marcadores ordinais.
+
+font-variant-position: controla o uso de glifos alternativos de tamanho menor, posicionados como sobrescrito ou subscrito em relação à linha de base da fonte.
+
+font-weight específica o peso de uma fonte.
+font-weight: normal|bold|bolder|lighter|number|initial|inherit;
+*/
+
+p {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: fonteHR; */
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p2 {
+    font-variant: small-caps ;
+}
+.p3 {
+    font-variant-caps: unicase;    
+}
+
+/* @font-face {
+    font-family: fonteHR;
+    src: url(fonte.tff);
+} */

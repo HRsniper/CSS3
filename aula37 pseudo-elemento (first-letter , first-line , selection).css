@@ -1,0 +1,41 @@
+/* 
+O seletor ::first-letter é usado para adicionar um estilo à primeira letra do seletor especificado.
+Nota: As seguintes (propriedades) podem ser usadas com ::first-letter:
+font , color , background , margin , padding , border , text-decoration , 
+vertical-align (apenas se float for 'none') , text-transform , line-height , 
+float , clear.
+                    ::first-letter {
+                        css declarations;
+                    }
+Nota: O seletor ::first-letter pode ser usado apenas com elementos em nível de bloco.
+
+O ::first-line seletor é usado para adicionar um estilo à primeira linha do seletor especificado.
+Nota: As seguintes (propriedades) podem ser usadas com ::first-line:
+font , color , background , word-spacing , letter-spacing , text-decoration , 
+vertical-align , text-transform , line-height , clear.
+                    ::first-line {
+                        css declarations;
+                    }
+Nota: O seletor :: first-line pode ser usado apenas com elementos em nível de bloco.
+
+O seletor ::selection corresponde à parte de um elemento que é selecionado por um usuário.
+Apenas algumas propriedades CSS podem ser aplicadas ao seletor :: selection: 
+color, background, cursor, and outline.
+
+::selection {
+  css declarations;
+}
+*/
+#p1::first-letter {
+    background-color: cadetblue;
+    color: black;
+}
+#p2::first-line {
+    background-color: violet;
+}
+
+/* sem uum elemento na frente vale para todos */
+::selection {
+  background-color: chocolate;
+  color: white;
+}

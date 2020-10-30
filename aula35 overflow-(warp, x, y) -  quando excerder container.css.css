@@ -1,0 +1,43 @@
+/* 
+overflow - Especifica o que acontece se o conteúdo exceder a caixa de um elemento.
+Nota: A propiedade overflow funciona apenas para elementos de bloco com uma altura especificada.
+overflow: visible|hidden|scroll|auto|initial|inherit;
+
+overflow-wrap - Especifica se o navegador pode ou não quebrar linhas dentro das palavras para impedir o estouro (quando uma string é muito longa para caber na caixa que o contém).
+overflow-wrap: normal|anywhere|break-word|initial|inherit;
+
+overflow-x - Especifica se é necessário recortar ou não as bordas esquerda / direita do conteúdo, se ele exceder a área de conteúdo do elemento.
+overflow-x: visible|hidden|scroll|auto|initial|inherit;
+
+overflow-y - Especifica se deve ou não recortar as bordas superior / inferior do conteúdo, se ele exceder a área de conteúdo do elemento.
+overflow-y: visible|hidden|scroll|auto|initial|inherit;
+*/
+
+div {
+    width: 500px;
+    height: 500px;
+    border: 3px solid tomato;
+}
+
+#d1 {
+    overflow: hidden;
+}
+#d2 {
+    overflow: scroll;
+}
+#d3 {
+    overflow: auto;
+}
+#d4 {
+    overflow-x: hidden;
+    border: 3px solid yellowgreen;
+}
+#d5 {
+    overflow-y: hidden;
+    border: 3px solid violet;
+}
+#d6 {
+    width: 300px;
+    overflow-wrap: break-word;
+    border: 3px solid turquoise;
+}

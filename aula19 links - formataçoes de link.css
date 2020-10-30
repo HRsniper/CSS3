@@ -1,0 +1,32 @@
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+    background-color:  #7E57C2;
+    padding: 10px;
+    display: table;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px black;
+
+}
+
+a:hover {
+    color: #76FF03;
+    box-shadow: 5px 5px 1px inset black;
+}
+
+
+
+
+
+
+
+/* 
+:visited - a:visited - Seleciona todos os links visitados.
+:link - a:link - Seleciona todos os links não visitados.
+:active - a:active - Seleciona o link ativo.
+:hover - a:hover - Seleciona links ao passar o mouse.
+*/
+/* 
+https://www.w3schools.com/cssref/css_selectors.asp
+ */

@@ -1,0 +1,20 @@
+/*
+Valor                   Descrição
+background-color:       Especifica a cor de fundo a ser usada.
+background-image:       Especifica UMA ou MAIS imagens de fundo a serem usadas.(varias funçoes)
+background-position:    Especifica a posição das imagens de fundo.(varias funçoes)
+background-size:        Especifica o tamanho das imagens de fundo.(varias funçoes)
+background-repeat:      Especifica como repetir as imagens de fundo.(varias funçoes)
+background-origin:      Especifica a área de posicionamento das imagens de fundo.
+background-clip:        Especifica a área de pintura das imagens de fundo.(varias funçoes)
+background-attachment:  Especifica se as imagens de segundo plano são fixas ou rolam com o restante da página.
+initial:                Define essa propriedade como seu valor padrão.
+inherit:                Herda essa propriedade de seu elemento pai.
+*/
+
+/* background-attachment: scroll|fixed|local|initial|inherit; */
+
+body {
+    background-image: url(38.webp);
+    background-attachment: fixed;
+}

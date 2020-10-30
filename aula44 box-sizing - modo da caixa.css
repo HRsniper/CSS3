@@ -1,0 +1,36 @@
+/* 
+A propriedade box-sizing define como a largura e a altura de um elemento são calculadas: elas devem incluir preenchimento e bordas ou não.
+box-sizing: content-box|border-box|initial|inherit;
+
+content-box- Default. As propriedades de largura e altura (e propriedades mín. / máx.) 
+    incluem conteúdo, preenchimento e borda.
+border-box - As propriedades de largura e altura (e propriedades mín / máx) 
+    incluem apenas o conteúdo. não estão incluí Borda e preenchimento .
+*/
+
+#d1 {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+#d2 {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 0px;
+}
+#d3 {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#d4 {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 10px;
+    box-sizing: content-box;
+}

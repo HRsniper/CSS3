@@ -1,0 +1,39 @@
+/* 
+A propriedade resize define se (e como) um elemento é redimensionável pelo usuário.
+    Nota: A resize propriedade não se aplica a elementos embutidos ou a elementos bloqueados 
+    onde overflow = "visible". Portanto, verifique se o estouro está definido como 
+    "scroll", "auto", ou "hidden".
+resize: none|both|horizontal|vertical|initial|inherit;
+
+none - valor padrão. O usuário não pode redimensionar o elemento.
+both O usuário pode redimensionar a altura e a largura do elemento.
+horizontal - O usuário pode redimensionar a largura do elemento.
+vertical - O usuário pode redimensionar a altura do elemento.
+initial - Define esta propriedade como seu valor padrão.
+inherit - herda essa propriedade de seu elemento pai.
+*/
+
+div {
+    width: 200px;
+    height: 40px;
+    border: 1px solid #000000;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+
+    overflow: auto; /* obrigatorio */
+}
+
+.d1 {
+    resize: none;
+}
+/* .d2 {} */
+.d3 {
+    resize: horizontal;
+}
+.d4 {
+    resize: vertical;
+}
+.d5 {
+    resize: both;
+}

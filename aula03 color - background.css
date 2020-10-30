@@ -1,0 +1,34 @@
+body {
+    /* texto */
+    color: red; /* tipo nome */
+    color: #ff0000; /* hexadicimal */
+    color: #f00; /* hexadicimal resumida mas quandos os 2 digitas do canais forem iguais */
+    color: rgb(255, 0, 0); /* decimal */
+    color: rgba(255, 0, 0, 0.9); /* decimal com alpha(transparencia) */
+    color: hsl(0, 100%, 50%); /* HSL significa matiz, saturação e luminosidade */
+    color: hsla(0, 100%, 50%, 0.9); /* HSL significa matiz, saturação e luminosidade com alpha(transparencia) */
+    background-color: #657573;
+    /* fundo */
+
+    /* background-color: currentColor; */
+    /* A currentcolor palavra-chave refere-se ao valor da propriedade de cor de um elemento. */
+}
+
+/*
+Valor                   Descrição
+background-color:       Especifica a cor de fundo a ser usada.
+                :    color    :especifica a cor do plano de fundo.(cores hex,dec,rgb,hsl,rgba,hsla e currentcolor) 
+                :    transparent    :especifica que a cor do plano de fundo deve ser transparente. Isso é o padrão.
+                :    initial    :define essa propriedade como seu valor padrão.
+                :    inherit    :herda essa propriedade de seu elemento pai.
+        
+background-image:       Especifica UMA ou MAIS imagens de fundo a serem usadas.
+background-position:    Especifica a posição das imagens de fundo.
+background-size:        Especifica o tamanho das imagens de fundo.
+background-repeat:      Especifica como repetir as imagens de fundo.
+background-origin:      Especifica a área de posicionamento das imagens de fundo.
+background-clip:        Especifica a área de pintura das imagens de fundo.
+background-attachment:  Especifica se as imagens de segundo plano são fixas ou rolam com o restante da página.
+initial:                Define essa propriedade como seu valor padrão.
+inherit:                Herda essa propriedade de seu elemento pai.
+*/

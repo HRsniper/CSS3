@@ -1,0 +1,30 @@
+p {
+/*elemeto*/
+    color: brown;
+}
+
+p.p1 {
+/* elemento p classe p1 */
+    color: blue;
+}
+.p1 {
+/* todas classe p1 */
+    color: rgb(147, 27, 177);
+}
+
+p#p2 {
+/* elemento p id p2 */
+    color: rgb(255, 0, 149);
+}
+#p2 {
+/* todos id p2 */
+    color: rgb(62, 231, 28);
+}
+
+h4,h5,h6 {
+/* seletor de grupo */
+    color: coral;
+    font-size: 20px;
+}
+
+/* tem varias tipos no site https://www.w3schools.com/cssref/css_selectors.asp e na apostila cfb */

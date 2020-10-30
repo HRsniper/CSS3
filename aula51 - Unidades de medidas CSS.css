@@ -1,0 +1,58 @@
+/* 
+Comprimentos absolutos
+As unidades de comprimento absoluto são fixas e um comprimento expresso em qualquer uma delas 
+    aparecerá exatamente com esse tamanho.As unidades de comprimento absoluto não são 
+    recomendadas para uso na tela, porque os tamanhos das telas variam muito. 
+    No entanto, eles podem ser usados ​​se o meio de saída for conhecido, como no layout de impressão.
+
+cm	centimeters
+mm	millimeters
+in	polegadas (1in = 96px = 2.54cm)
+px *	pixels (1px = 1/96th of 1in)
+pt	points (1pt = 1/72 of 1in)
+pc	picas(paicas) (1pc = 12 pt)
+
+Comprimentos relativos
+As unidades de comprimento relativo especificam um comprimento em relação a outra 
+    propriedade de comprimento. As unidades de comprimento relativo escalam melhor entre 
+    diferentes mídias de renderização.
+
+em	Relativo ao tamanho da fonte do elemento (2em significa 2 vezes o tamanho da fonte atual).
+ex	Relativo à altura da letra x da fonte atual (raramente usada).
+ch	Em relação à largura do "0" (zero).
+rem	Relativo ao tamanho da fonte do elemento raiz. tag html
+vw	Relativo a 1% da largura da viewport*.
+vh	Relativo a 1% da largura da viewport*.
+vmin	Relativo a 1% da dimensão menor da viewport's*.
+vmax	Relativo a 1% da dimensão maior da viewport's*.
+%	Em relação ao elemento pai.
+fr  fraçao para grid
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+    /* font-size: 16px; padrao */
+}
+
+.p1 { font-size: 2cm; }
+.p2 { font-size: 20mm; }
+.p3 { font-size: 2in; }
+.p4 { font-size: 20px; }
+.p5 { font-size: 20pt; }
+.p6 { font-size: 2pc; }
+.p7 { font-size: 2em; }
+.p8 { font-size: 2ex; }
+.p9 { font-size: 2ch; }
+.p10 { font-size: 2rem; }
+.p11 { font-size: 2vw; }
+.p12 { font-size: 2vh; }
+.p13 { font-size: 2vmin; }
+.p14 { font-size: 2vmax; }
+.p15 { font-size: 20%; }
+.p16 { font-size: 20fr; }
+
+
+.padrao {
+    color: red;
+}

@@ -1,0 +1,57 @@
+table,td,th {
+    border: 1px solid black;
+}
+table {
+    width: 500px;
+    table-layout: fixed;
+    text-align: center;
+    border-collapse: collapse;
+
+    /*
+    border-collapse: separate;
+    border-spacing: 10px 15px;
+    empty-cells: hide;
+    */
+}
+
+td,th {
+    height: 40px;
+}
+
+th {
+    background-color: beige;
+}
+
+tr:nth-child(even){
+    background-color: cadetblue;
+}
+
+p:nth-child(even) {
+    background-color: aqua;
+}
+/*
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/:nth-child
+O :nth-child(n) selector corresponde a cada elemento que é o n º criança, independentemente do tipo, de seu pai.:nth-child(n)
+n pode ser um número, uma palavra-chave ou uma fórmula.
+:nth-child(number) {
+  css declarations;
+}
+odd - Representa elementos cuja posição numérica em uma série de irmãos seja ímpar: 1, 3, 5, etc.
+even - Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc.
+
+A empty-cells propriedade define se deve ou não exibir bordas nas células vazias em uma tabela.
+Nota: Esta propriedade não terá efeito se o border-collapse for "collapse".
+empty-cells: show|hide|initial|inherit;
+
+border-collapse: Define se as bordas da tabela devem ser recolhidas em uma única borda ou separadas.
+border-collapse: separate|collapse|initial|inherit;
+
+    A table-layout propriedade define o algoritmo usado para dispor as células, linhas e colunas da tabela.
+Dica: O principal benefício do layout da tabela: fixo; é que a tabela é renderizada muito mais rapidamente. Em tabelas grandes, os usuários não verão nenhuma parte da tabela até que o navegador processe a tabela inteira.
+table-layout: auto|fixed|initial|inherit;
+
+auto - Os navegadores usam um algoritmo de layout de tabela automático. A largura da coluna é definida pelo maior conteúdo inquebrável das células. O conteúdo ditará o layout.
+fixo - Define um algoritmo de layout de tabela fixo. As larguras da tabela e da coluna são definidas pelas larguras da tabela e da coluna ou pela largura da primeira linha de células. Células em outras linhas não afetam as larguras das colunas. Se nenhuma largura estiver presente na primeira linha, as larguras da coluna serão divididas igualmente na tabela, independentemente do conteúdo dentro das células.
+initial - Define esta propriedade como seu valor padrão.
+inherit - Herda essa propriedade de seu elemento pai.
+*/

@@ -1,0 +1,69 @@
+/* 
+A propriedade filter define efeitos visuais (como desfoque e saturação) para um elemento (geralmente <img>).
+    Nota: Os filtros que usam valores percentuais (ou seja, 75%) também aceitam o valor como decimal (ou seja, 0,75).
+filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url();
+
+
+drop-shadow (h-shadow v-shadow blur spread color) - aplica um efeito de sombreamento à imagem.
+    -> h-shadow - obrigatório. Especifica um valor de pixel para a sombra horizontal. Valores negativos colocam a sombra à esquerda da imagem.
+    -> v-shadow - obrigatório. Especifica um valor de pixel para a sombra vertical. Valores negativos colocam a sombra acima da imagem.
+    -> blur - Opcional. Este é o terceiro valor e deve estar em pixels. Adiciona um efeito de desfoque à sombra. Um valor maior criará mais desfoque (a sombra se torna maior e mais clara). Valores negativos não são permitidos. Se nenhum valor for especificado, 0 será usado (a borda da sombra é nítida).
+    -> spread - Opcional. Este é o quarto valor e deve estar em pixels. Valores positivos farão com que a sombra se expanda e cresça, e valores negativos farão com que a sombra encolha. Se não for especificado, será 0 (a sombra terá o mesmo tamanho que o elemento).
+    -> color - opcional. Adiciona uma cor à sombra. Se não especificado, a cor depende do navegador (geralmente preto).
+--- Dica: esse filtro é semelhante à propriedade box-shadow.
+
+hue-rotate (deg) - aplica uma rotação de matiz na imagem. O valor define o número de graus
+    ao redor do círculo de cores que as amostras de imagem serão ajustadas. 0deg é o padrão
+     e representa a imagem original. O valor máximo é 360deg.
+
+invert (%) - inverte as amostras na imagem.0% (0) é o padrão e representa a imagem original.
+    100% tornará a imagem completamente invertida.
+
+opacity (%) - Define o nível de opacidade da imagem. O nível de opacidade descreve 
+    o nível de transparência, em que 0% é completamente transparente. 100% (1) é o padrão e representa a imagem original (sem transparência).
+    Dica: esse filtro é semelhante à propriedade opacidade.
+
+saturate (%) - satura a imagem. 0% (0) tornará a imagem completamente não saturada. 
+100% é o padrão e representa a imagem original.Valores acima de 100% fornecem resultados super saturados.
+
+sepia (%) - converte a imagem em sépia. 0% (0) é o padrão e representa a imagem original. 
+    100% tornará a imagem completamente sépia.
+
+url () -A função url () pega o local de um arquivo XML que especifica um filtro SVG e 
+    pode incluir uma âncora em um elemento de filtro específico.
+*/
+
+img {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.drop-shadow {
+    filter: drop-shadow(5px 10px 7px /* 0px */ red);
+}
+
+.hue-rotate {
+    filter: hue-rotate(50deg);
+}
+
+.invert {
+    filter: invert(70%);
+}
+
+.opacity {
+    filter: opacity(50%);
+}
+
+.saturate {
+    filter: contrast(150%);
+}
+
+.sepia {
+    filter: sepia(60%);
+}
+
+
+/* multi-filter */
+.multi {
+    filter: grayscale(50%) saturate(150%);
+}

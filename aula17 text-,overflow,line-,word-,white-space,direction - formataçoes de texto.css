@@ -1,0 +1,124 @@
+/* 
+text-align: especifica o alinhamento horizontal do texto.
+text-align: left|right|center|justify|initial|inherit;
+
+text-align-last: descreve como a última linha de um bloco ou linha antes de uma quebra de linha
+ forçada é alinhada quando o alinhamento de texto é "justify".
+text-align-last: auto|left|right|center|justify|start|end|initial|inherit;
+
+texto-combine-upright: Especifica a combinação de vários caracteres no espaço de um único caractere.
+
+text-decoration: especifica a decoração adicionada ao texto.
+text-decoration: text-decoration-line text-decoration-color text-decoration-style|initial|inherit;
+
+text-decoration-color: especifica a cor da decoração do texto.
+text-decoration-color: color|initial|inherit;
+
+text-decoration-line: especifica o tipo de linha em uma decoração de texto.
+text-decoration-line: none|underline|overline|line-through|initial|inherit;
+
+text-decoration-style: especifica o estilo da linha em uma decoração de texto.
+text-decoration-style: solid|double|dotted|dashed|wavy|initial|inherit;
+
+text-indent: especifica o recuo da primeira linha em um bloco de texto.
+text-indent: length|%|initial|inherit;
+
+text-justify; Especifica o método de justificação usado quando o alinhamento de texto é "justify".
+text-justify: auto|inter-word|inter-character|none|initial|inherit;
+
+text-orientation: define a orientação do texto em uma linha.
+
+text-overflow: especifica o que deve acontecer quando o texto excede o elemento que o contém.
+text-overflow: clip|ellipsis|string|initial|inherit;
+
+text-shadow: adiciona sombra ao texto.
+text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;
+
+text-transform: controla a capitalização de texto.
+text-transform: none|capitalize|uppercase|lowercase|initial|inherit;
+
+text-underline-position: especifica a posição do sublinhado que é definida usando a propriedade decoração de texto.
+
+letter-spacing: aumenta ou diminui o espaço entre os caracteres em um texto.
+letter-spacing: normal|length|initial|inherit;
+
+line-break: especifica como/se interromper ou quebrar linhas.
+
+line-height: define a altura da linha.
+line-height: normal|number|length|%|initial|inherit;
+
+direction: Especifica a direção do texto / direção da escrita.
+direction: ltr|rtl|initial|inherit;
+
+word-spacing: aumenta ou diminui o espaço entre as palavras em um texto.
+word-spacing: normal|length|initial|inherit;
+
+word-break: especifica como as palavras devem quebrar ao chegar ao final de uma linha.
+word-break: normal|break-all|keep-all|break-word|initial|inherit;
+
+white-space: especifica como o espaço em branco dentro de um elemento(container) é tratado.
+white-space: normal|nowrap|pre|pre-line|pre-wrap|initial|inherit;
+
+overflow: Especifica o que acontece se o conteúdo exceder a caixa de um elemento.
+overflow: visible|hidden|scroll|auto|initial|inherit;
+*/
+p {
+    color: #283593;
+    text-indent: 100px;
+    letter-spacing: 5px;
+    line-height: 2;
+}
+
+.p1 {
+    /* text-align: match-parent; */
+    /* text-align: start; */
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+    direction: ltr;
+    letter-spacing: normal;
+    word-spacing: 10px;
+    text-align-last: right;
+}
+
+.p2 {
+    /* text-align: end; */
+    text-align: right;
+    text-decoration: line-through;
+    text-transform: lowercase;
+}
+
+.p3 {
+    text-align: justify;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.p4 {
+    text-align: center;
+    text-decoration: overline;
+    text-transform: capitalize;
+    direction: rtl;
+}
+
+.d1 {
+    width: 200px;
+    height: 200px;
+    border: #283593 1px solid;
+    white-space: nowrap;/* O texto nunca será quebrado para a próxima linha. so com <br> */
+    overflow: hidden;
+}
+
+.d2 {
+    width: 200px;
+    height: 100px;
+    border: #283593 1px solid;
+    overflow: scroll;
+}
+.d3 {
+    width: 200px;
+    height: 100px;
+    border: #283593 1px solid;
+    overflow: auto;
+    word-break: break-all;
+}

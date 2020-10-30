@@ -1,0 +1,21 @@
+/* a metapropriedade background, que nos possibilidade definir 
+várias formatações de plano de fundo em um só parâmetro. */
+
+body {
+    background: #aaa url(38.webp) repeat-x 0px 0px / 100%;
+
+    /* background-color: #aaa;
+    background-image: url(38.webp);
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    background-size: 100%; */
+}
+
+/* base{
+    background-position: center 0px;
+} */
+
+/* 
+background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+
+*/

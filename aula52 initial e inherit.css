@@ -1,0 +1,22 @@
+html {
+    color: #f00;
+}
+
+.p1 {
+    color: initial;
+}
+
+.d1 {
+    color: yellow;
+}
+
+.d2 {
+    color: violet;
+}
+
+.p2 {
+    color: inherit;
+}
+.p3 {
+    color: inherit;
+}

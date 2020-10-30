@@ -1,0 +1,170 @@
+/*
+display
+flex:  exibe um elemento como um contêiner flexível no nível do bloco.(usa-se no Elemento pai (contêiner))(usa-se no Elemento filho)
+inline-flex: exibe um elemento como um contêiner flexível no nível de linha.
+
+Properties
+flex: Uma propriedade abreviada para as propriedades flex-grow, flex-shrink e flex-base.(para container pai)
+flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;
+
+flex-grow:  especifica quanto o item crescerá em relação ao restante dos itens flexíveis dentro do mesmo contêiner.(para container filho)
+flex-grow: number|initial|inherit;
+
+flex-basis: especifica o comprimento inicial de um item flexível.(para container filho)
+flex-basis: number|auto|initial|inherit;
+
+flex-shrink: especifica como o item será reduzido em relação ao restante dos itens flexíveis dentro do mesmo contêiner.(para container filho)
+flex-shrink: number|initial|inherit;
+
+flex-flow: uma propriedade abreviada para as propriedades flex-direction e flex-wrap.(para container pai)
+flex-flow: flex-direction flex-wrap|initial|inherit;
+
+flex-direction: especifica a direção dos itens flexíveis.(para container pai)
+flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
+
+flex-wrap: Especifica se os itens flexíveis devem ou não quebrar.(para container pai)
+flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit;
+
+justify-content: propriedade alinha os itens do contêiner flexível quando os itens não usam todo o espaço disponível no eixo principal (horizontalmente).(para container pai)
+justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;
+
+align-items: propriedade especifica o alinhamento padrão para itens dentro do contêiner flexível.(verticalmente).(para container pai)
+align-items: stretch|center|flex-start|flex-end|baseline|initial|inherit;
+
+align-self: propriedade especifica o alinhamento do item selecionado dentro do contêiner flexível.(para container filho)
+Nota: A align-self propriedade substitui a propriedade align-items do contêiner flexível .
+align-self: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit;
+
+align-content: propriedade modifica o comportamento da propriedade flex-wrap . É semelhante a align-items , mas, em vez de alinhar itens flexíveis, alinha linhas flexíveis.(para container pai)
+Nota: Deve haver várias linhas de itens para que essa propriedade tenha efeito!
+Dica: Use a propriedade justify-content para alinhar os itens no eixo principal (horizontalmente).
+align-content: stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit;
+
+order: propriedade especifica a ordem de um item flexível em relação ao restante dos itens flexíveis dentro do mesmo contêiner.(para container filho)
+order: number|initial|inherit;
+*/
+
+body {
+    background-color: #d1d1d1;
+}
+
+section { /* container pai*/
+    border: 5px solid #000000;
+    display: flex;
+    margin-bottom: 2%;
+}
+div { /* container filho*/
+    border: 2px solid #ff0000;
+}
+/* ------------------------------------------- */
+/*
+#sec1 { } 
+*/
+    #sec1 div { /* container filho*/
+        flex: 1;
+        /*
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 1;
+        */
+}
+/* ------------------------------------------- */
+#sec2 { /* container pai*/
+    flex-wrap: wrap;
+    /*
+    flex-flow: row wrap;
+    */
+}
+#sec2 div { /* container filho*/
+    width: 300px;
+}
+/* ------------------------------------------- */
+#sec3 { /* container pai*/
+    justify-content: center;
+}
+/* ------------------------------------------- */
+#sec4 { /* container pai*/
+    align-items: center;
+    height: 100px;
+}
+    #sec4 div { /* container filho*/
+        height: 50px;
+    }
+/* ------------------------------------------- */
+#sec5 { /* container pai*/
+    flex-direction: column;
+}
+/* ------------------------------------------- */
+#sec6 { /* container pai*/
+    height: 150px;
+    width: 150px;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+    #sec6 div { /* container filho*/
+        width: 50px;
+        margin: 3px;
+    }
+/* ------------------------------------------- */
+#sec7 { /* container pai*/
+    height: 150px;
+    width: 150px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+    #sec7 div { /* container filho*/
+        width: 50px;
+        margin: 3px;
+    }
+/* ------------------------------------------- */
+/* para filhos */
+/* ------------------------------------------ */
+#sec8 #d1 { order: 5; }
+#sec8 #d2 { order: 4; }
+#sec8 #d3 { order: 2; }
+#sec8 #d4 { order: 1; }
+#sec8 #d5 { order: 3; }
+/* ------------------------------------------- */
+#sec9 div {
+    height: 50px;
+    flex-grow: 1; /* 0 para nao esticar 1 para sim */
+}
+/* ------------------------------------------- */
+#sec10 div {
+    height: 50px;
+    /* width: 50px; */
+}
+    #sec10 #d1 {
+        flex-grow: 1;
+    }
+    #sec10 #d2 , #d3 , #d4 {
+        width: 100px;
+    }
+    #sec10 #d5 {
+        flex-shrink: 1; /* 0 para nao contraier 1 para sim */
+    }
+/* ------------------------------------------- */
+#sec11{
+    height: 80px;
+    /* width: 50px; */
+}
+#sec11 #d1 {
+    flex-basis: 25%;
+}
+#sec11 #d2 , #d3 , #d4 , #d5 {
+    width: 80px;
+    }
+/* ------------------------------------------- */
+#sec12 {
+    height: 150px;
+    /* width: 50px; */
+}
+    #sec12 #d1 {
+        align-self: center;
+    }
+    #sec12 #d3 {
+        align-self: flex-start;
+    }
+/* ------------------------------------------- */
+/* ------------------------------------------- */

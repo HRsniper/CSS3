@@ -1,0 +1,37 @@
+/* 
+A propriedade filter define efeitos visuais (como desfoque e saturação) para um elemento (geralmente <img>).
+    Nota: Os filtros que usam valores percentuais (ou seja, 75%) também aceitam o valor como decimal (ou seja, 0,75).
+filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url();
+
+
+blur (px) - aplica um efeito de desfoque à imagem. Um valor maior criará mais desfoque.
+    Se nenhum valor for especificado, 0 será usado.
+
+brightness (%) - Ajusta o brilho da imagem. 0% tornará a imagem completamente preta.
+    100% (1) é o padrão e representa a imagem original. Valores acima de 100% fornecerão resultados mais claros.
+
+contrast (%) - Ajusta o contraste da imagem.0% tornará a imagem completamente preta.
+    100% (1) é o padrão e representa a imagem original. Valores acima de 100% fornecerão resultados com mais contraste.
+
+grayscale (%) - converte a imagem em escala de cinza. 0% (0) é o padrão e representa a imagem original.
+    100% tornará a imagem completamente cinza (usada para imagens em preto e branco). Nota: Valores negativos não são permitidos.
+*/
+
+img {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    /* filter: grayscale(1); */
+}
+.blur {
+    filter: blur(5px);
+}
+.brightness {
+    filter: brightness(150%);
+}
+.contrast {
+    filter: contrast(50%);
+}

@@ -1,0 +1,121 @@
+/* 
+animation - Uma propriedade abreviada de todas as propriedades animation- *.
+animation: name duration timing-function delay iteration-count direction fill-mode play-state |initial|inherit;
+
+animation-delay - Especifica um atraso para o início de uma animação.é definido em segundos (s) ou milissegundos (ms).
+animation-delay: time|initial|inherit;
+
+animation-direction - Especifica se uma animação deve ser reproduzida para frente, para trás ou em ciclos alternados.
+animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;
+
+animation-duration - Especifica quanto tempo uma animação deve levar para concluir um ciclo.é definido em segundos (s) ou milissegundos (ms).
+animation-duration: time|initial|inherit;
+
+animation-fill-mode - Especifica um estilo para o elemento quando a animação não está sendo reproduzida (antes de iniciar, depois de terminar ou ambas).
+animation-fill-mode: none|forwards|backwards|both|initial|inherit;
+
+animation-iteration-count - Especifica o número de vezes que uma animação deve ser reproduzida.
+animation-iteration-count: number|infinite|initial|inherit;
+
+animation-name -  Especifica um nome para a animação @keyframes.pode-se adicionar mais de uma.
+animation-name: keyframename|none|initial|inherit;
+
+animation-play-state - Especifica se a animação está em execução ou pausada.
+animation-play-state: paused|running|initial|inherit;
+
+animation-timing-function - Especifica a curva de velocidade de uma animação.
+animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+-> igual as propriedades do transition.
+
+Nota: sempre especifique a propriedade animation-duration , caso contrário, a duração é 0 e nunca será reproduzida.
+
+
+A @keyframes regra especifica o código de animação.
+A animação é criada mudando gradualmente de um conjunto de estilos CSS para outro.
+Durante a animação, você pode alterar o conjunto de estilos CSS várias vezes.
+Especifique quando a mudança de estilo ocorrerá em porcentagem ou com as palavras-chave "from" e "to", que são iguais a 0% e 100%. 0% é o início da animação, 100% é quando a animação é concluída.
+Dica: Para obter o melhor suporte ao navegador, você sempre deve definir os seletores 0% e 100%.
+Nota: A regra !Important é ignorada em um keyframe. ( 50%  {top: 100px !important;} ignored )
+
+@keyframes animationname { 
+    keyframes-selector {css-styles;}
+}
+
+animationname - obrigatório. Define o nome da animação.
+keyframes-selector - Obrigatório. Porcentagem da duração da animação.
+Valores legais:  0-100%
+                 from (igual a 0%)
+                 to (igual a 100%)
+Nota: Você pode ter muitos seletores de quadros-chave em uma animação.
+
+CSS-styles - Necessário. Uma ou mais propriedades legais do estilo CSS.
+*/
+
+@keyframes animaçao {
+    0% {/*text-align: center;*/}
+    100% {
+        /* text-align: justify; */
+        color: springgreen;
+        background-color: slategray;
+    }
+}
+
+@keyframes ani2 {
+    0% {
+        font-size: small;
+        color: yellow;
+        background-color:silver;
+    }
+    25% {
+        font-size: medium;
+        color: chartreuse;
+    }
+    50% {
+        color: aqua;
+        font-size: large;
+        left:50px;
+        top: 50px;
+    }
+    75% {color: tomato;}
+    100% {background-color: grey;}
+}
+
+@keyframes rotate{
+    0% {transform: rotate(0deg);;}
+    100% {transform: rotate(360deg);}
+}
+
+p {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+#p1 {
+    animation-name: animaçao;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    /* animation-timing-function: ease-out; */
+    /* animation-fill-mode: both; */
+    /* animation-play-state: paused; */
+    animation-direction: alternate;
+}
+
+#p7 {
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-name: ani2;
+    position: relative;
+    animation-delay: 2s;
+}
+
+img {
+    width: 300px;
+    animation: rotate 1s infinite;
+    /* animation-duration: 1s;
+    animation-name: rotate;
+    animation-iteration-count: infinite; */
+}

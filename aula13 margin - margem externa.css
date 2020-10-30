@@ -1,0 +1,52 @@
+/* 
+configura o espaçamento externo dos elementos.
+
+margin: define todas as propriedades da margem em uma declaração.
+margin-bottom: define a margem inferior de um elemento.
+margin-left: define a margem esquerda de um elemento.
+margin-right: define a margem direita de um elemento.
+margin-top: define a margem superior de um elemento.
+*/
+/* 
+    margin-top: length|auto|initial|inherit;
+    margin-right: length|auto|initial|inherit;
+    margin-bottom: length|auto|initial|inherit;
+    margin-left: length|auto|initial|inherit;
+
+    margin: 10px 5px 15px 20px;
+*/
+
+body {
+    margin: 0px;
+}
+
+div {
+    border: 2px solid #000000;
+    margin: 30px;
+    
+}
+
+p {
+    border: 2px solid #ff0000;
+    margin: 50px 0px 100px 100px;
+    /*       T    R    B    L  */
+    text-align: center;
+}
+
+#pp {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    text-align: right;
+}
+
+.dd {
+    width: 300px;
+    height: 100px;
+    margin: auto;
+}
+
+.dd p {
+    width: 200px;
+    margin: auto;    
+}

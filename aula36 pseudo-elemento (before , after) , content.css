@@ -1,0 +1,32 @@
+/* 
+Os pseudoelementos :: before e :: after podem ser usados ​​para descrever o conteúdo gerado
+ antes ou depois do conteúdo de um elemento,O seletor ::after insere algo após o conteúdo de cada elemento selecionado.
+O seletor ::before insere algo antes do conteúdo de cada elemento selecionado.
+::before {                  ::after {
+  css declarations;             css declarations;
+}                           }
+
+A propriedade content é usada com os pseudoelementos :: before e :: after , para inserir o conteúdo gerado.
+content: normal|none|counter|attr|string|open-quote|close-quote|no-open-quote|no-close-quote|url|initial|inherit;
+
+normal - Valor padrão. Define o conteúdo, se especificado, como normal, cujo padrão é "none" (que não é nada).
+none - Define o conteúdo, se especificado, para nada
+counter , counters - Define o conteúdo como um contador.
+attr(atributo) - define o conteúdo como um dos atributos do seletor.
+string - Define o conteúdo para o texto que você especificar
+open-quote - Define o conteúdo como uma cotação/citação/aspas  de abertura.
+close-quote - Define o conteúdo como uma cotação/citação/aspas  de fechamento. Nota: Você não pode ter close-quote sem open-quote.
+no-open-quote - Remove a cotação/citação/aspas  de abertura do conteúdo, se especificado.
+no-close-quote - Remove a cotação/citação/aspas  de fechamento do conteúdo, se especificado. Nota: Você não pode ter no-close-quote sem no-open-quote.
+url(url) - define o conteúdo para ser algum tipo de mídia (uma imagem, um som, um vídeo etc.).
+initial- Define esta propriedade como seu valor padrão.
+inherit - herda essa propriedade de seu elemento pai.
+*/
+p::before {
+    content: "pseudo elemento ::before";
+    background-color: cadetblue;
+}
+p::after {
+    content: "pseudo elemento ::after";
+    background-color: violet;
+}

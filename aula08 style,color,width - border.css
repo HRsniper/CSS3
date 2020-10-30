@@ -1,0 +1,60 @@
+/* 
+border: Uma propriedade abreviada para largura da borda, estilo da borda e cor da borda.
+border-bottom: uma propriedade abreviada de border-bottom-width, border-bottom-style e border-bottom-color.
+border-bottom-color: define a cor da borda inferior.
+border-bottom-left-radius: define o raio da borda do canto inferior esquerdo.
+border-bottom-right-radius: define o raio da borda do canto inferior direito.
+border-bottom-style: define o estilo da borda inferior.
+border-bottom-width: define a largura da borda inferior.
+border-collapse: Define se as bordas da tabela devem ser recolhidas em uma única borda ou separadas.
+border-color: define a cor das quatro bordas.
+border-image: uma propriedade abreviada de todas as propriedades border-image- *.
+border-image-outset: especifica a quantidade pela qual a área da imagem da borda se estende além da caixa da borda.
+border-image-repeat: especifica se a imagem da borda deve ser repetida, arredondada ou esticada.
+border-image-slice: especifica como cortar a imagem da borda.
+border-image-source: especifica o caminho para a imagem a ser usada como borda.
+border-image-width: especifica a largura da imagem da borda.
+border-left: uma propriedade abreviada para todas as propriedades border-left- *.
+border-left-color: define a cor da borda esquerda.
+border-left-style: define o estilo da borda esquerda.
+border-left-width: define a largura da borda esquerda.
+border-radius: uma propriedade abreviada das quatro propriedades do border-radius- * -.
+border-right: uma propriedade abreviada de todas as propriedades border-right- *.
+border-right-color: define a cor da borda direita.
+border-right-style: define o estilo da borda direita.
+border-right-width: define a largura da borda direita.
+border-spacing: define a distância entre as bordas das células adjacentes.
+border-style: define o estilo das quatro bordas.
+border-top: uma propriedade abreviada de largura da borda superior, estilo da borda superior e cor da borda superior.
+border-top-color: define a cor da borda superior.
+border-top-left-radius: define o raio da borda do canto superior esquerdo.
+border-top-right-radius define o raio da borda do canto superior direito.
+border-top-style: define o estilo da borda superior.
+border-top-width: define a largura da borda superior.
+border-width: define a largura das quatro bordas. 
+*/
+
+/*                        requerido
+    border: border-width border-style border-color|initial|inherit;
+    border-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+    border-color: color|transparent|initial|inherit;
+    border-width: medium|thin|thick|length|initial|inherit;
+ */
+
+#n1 {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+    color: #f5f5f5;
+    border-width: 20px;
+}
+
+#n2 {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    border: solid yellow 20px;
+    color: #f5f5f5;
+}

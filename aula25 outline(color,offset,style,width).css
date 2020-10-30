@@ -1,0 +1,40 @@
+/*
+Um contorno é uma linha que é desenhada ao redor dos elementos, fora das bordas, para destacar o elemento.
+Nota: O contorno não faz parte das dimensões do elemento, portanto, as propriedades de largura e altura do elemento não contêm a largura do contorno.
+
+outline: Uma propriedade abreviada para as propriedades largura do contorno, estilo do contorno e cor da estrutura de tópicos.
+outline: outline-width outline-style(required) outline-color|initial|inherit;
+
+outline-color: define a cor de um contorno.
+outline-color: invert|color|initial|inherit;
+
+outline-offset: desloca um contorno e o desenha além da borda da borda.
+outline-offset: length|initial|inherit;
+
+outline-style: define o estilo de uma estrutura de tópicos.
+outline-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+
+outline-width: define a largura de um contorno.
+outline-width: medium|thin|thick|length|initial|inherit;
+*/
+
+div {
+    border: 1px solid #000000;
+    width: 200px;
+    height: 200px;
+}
+
+#d1 {
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: aqua;
+}
+
+#d2 {
+    outline: 5px solid tan;
+}
+
+#d3 {
+    outline: 5px solid red;
+    outline-offset: 10px;
+}

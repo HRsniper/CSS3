@@ -1,0 +1,26 @@
+/* 
+A  propriedade float especifica como um elemento deve flutuar em seu container.
+Nota: Elementos absolutamente posicionados ignoram a floatpropriedade!
+Nota: Os elementos após um elemento flutuante fluirão em torno dele. Para evitar isso, use a propriedade clear ou o clearfix hack 
+float: none|left|right|initial|inherit;
+
+A  propriedade clear especifica em quais lados de um elemento os elementos flutuantes não podem flutuar.
+clear: none|left|right|both|initial|inherit;
+
+*/
+img {
+    border: 1px solid #000000;
+    width: 100px;
+    height: 100px;
+}
+
+#img1 {
+    float: left;
+}
+#img2 {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}

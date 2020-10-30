@@ -1,0 +1,66 @@
+body {
+    background-image: url(C:\Users\PCprincipal\Downloads\sololeveling.png);
+}
+
+article , header , nav , section , div , footer {
+    display: flex;
+}
+
+header {
+    justify-content: center;
+}
+
+nav {
+    justify-content: center;
+    background-color: rgba(0, 80, 240);
+    flex-wrap: wrap;
+    margin-bottom: 0.5em;
+    height: 2em;
+    align-items: center;
+}
+nav a {
+    min-width: 5em;
+    max-width: 5em;
+    min-height: 1.5em;
+    max-height: 1.5em;
+    background-color: rgb(50, 100, 240);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-right: 0.2em solid rgb(0, 80, 240);
+    }
+    
+    nav a:hover {
+        background-color: rgb(50, 150, 240);
+        border: 1px solid white;
+    }
+
+article {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+section {
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+        article section div {
+            min-width: 15em;
+            max-width: 15em;
+            min-height: 10em;
+            max-height: 10em;
+            border: 1px solid black;
+            margin: 0.5em;
+            /* margin: 1px; */
+            border-radius: 5%;
+            align-items: center;
+            justify-content: center;
+        }
+
+footer {
+    background-color: rgb(230, 230, 230);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(0, 0, 255, 0.7);
+}

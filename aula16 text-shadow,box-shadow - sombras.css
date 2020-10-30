@@ -1,0 +1,71 @@
+/*
+    text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;
+
+h-shadow:   obrigatório. A posição da sombra horizontal. Valores negativos são permitidos.
+v-shadow:   obrigatório. A posição da sombra vertical. Valores negativos são permitidos.
+blur-radius:    opcional. O raio de desfoque. O valor padrão é 0.
+color:  opcional. A cor da sombra.
+none:   valor padrão. Sem sombra.
+initial:    define essa propriedade como seu valor padrão.
+inherit:    herda essa propriedade de seu elemento pai.
+
+    Nota: Para adicionar mais de uma sombra ao texto, adicione uma lista de sombras separadas por vírgula.
+
+
+*/
+
+/*
+    box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+
+    nenhum: valor padrão. Nenhuma sombra é exibida.
+
+h-offset:   obrigatório. O deslocamento horizontal da sombra. Um valor positivo coloca a sombra no lado direito da caixa, um valor negativo coloca a sombra no lado esquerdo da caixa.
+v-offset:   obrigatório. O deslocamento vertical da sombra. Um valor positivo coloca a sombra abaixo da caixa, um valor negativo coloca a sombra acima da caixa.
+blur:   opcional. O raio de desfoque. Quanto maior o número, mais borrada será a sombra.
+spread:   opcional. O raio de propagação. Um valor positivo aumenta o tamanho da sombra, um valor negativo diminui o tamanho da sombra.
+color:   opcional. A cor da sombra. O valor padrão é a cor do texto. Consulte Valores de cores CSS para obter uma lista completa dos possíveis valores de cores.
+(Nota: no Safari (no PC) é necessário o parâmetro color. Se você não especificar a cor, a sombra não será exibida).
+inset: opcional. Altera a sombra de uma sombra externa (ouset é o padrão) para uma sombra interna.
+initial: define essa propriedade como seu valor padrão.
+inherit: herda essa propriedade de seu elemento pai.
+
+    Nota: Para anexar mais de uma sombra a um elemento, adicione uma lista de sombras separadas por vírgula.
+*/
+
+.H {
+    font-size: 5em;
+    color: #E81123;
+}
+
+.q {
+    text-shadow: 10px 10px 0px black;
+}
+
+.w {
+    text-shadow: 10px 10px 5px black,-5px -5px 10px blue;
+}
+
+.e {
+    text-shadow: 10px 10px 5px black;
+}
+
+
+
+.D {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+}
+
+.r {
+    box-shadow: 10px 10px 0px black;
+}
+
+.t {
+    box-shadow: 10px 10px 5px black,-5px -5px 5px blue;
+}
+
+.y {
+    box-shadow: 10px 10px 5px 15px black;
+}

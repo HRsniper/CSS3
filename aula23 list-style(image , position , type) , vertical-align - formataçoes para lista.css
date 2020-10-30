@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+ol,ul {
+    /* list-style-type: upper-roman; */
+    /* list-style-image: url(Seta.png); */
+    font-family: 'roboto' , sans-serif;
+    list-style: upper-roman inside /*url(Seta.png)*/;
+}
+li {
+    border: 1px solid black;
+    /* list-style-position: inside; */
+    /* list-style-position: outside; */
+}
+
+/* menu */
+.menu {
+    font-family: 'roboto' , sans-serif;
+    list-style: none;
+}
+.menu a {
+     text-decoration: none;
+     color: white;
+}
+.menu li {
+    border: none;
+    width: 140px;
+    height: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgb(70, 70, 220);
+    border: 1px solid white;
+}
+li:hover {
+    background-color: rgba(70, 70, 220, 0.5);
+}
+/* end menu */
+
+/* 
+A vertical-align propriedade define o alinhamento vertical de um elemento.
+vertical-align: baseline|length|%|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;
+
+list-style - define todas as propriedades para uma lista em uma declaração.
+list-style: list-style-type list-style-position list-style-image|initial|inherit;
+
+list-style-image - Especifica uma imagem como marcador de item de lista.O valor padrão é "none"
+list-style-image: none|url|initial|inherit;
+
+list-style-position - Especifica a posição dos marcadores de itens de lista (pontos de marcador). O valor padrão é "outside"
+list-style-position: inside|outside|initial|inherit;
+
+list-style-type - Especifica o tipo de marcador de item de lista.O valor padrão é "disc"
+list-style-type: disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha | none | inherit;
+
+*/

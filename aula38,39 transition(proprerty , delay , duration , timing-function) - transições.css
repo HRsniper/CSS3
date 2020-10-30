@@ -1,0 +1,99 @@
+/* 
+transition - Uma propriedade abreviada de todas as propriedades de transition-* . tem que ser
+    disparado por alguem evento.se coloca no elemento ,nao no disparador.
+transition: property duration timing-function delay|initial|inherit;
+
+transition-delay - Especifica um atraso do efeito da transição.
+transition-delay: time|initial|inherit;
+
+transition-duration - Especifica quantos segundos(s) ou milissegundos(ms) um efeito de transição leva para ser concluído.
+transition-duration: time|initial|inherit;
+
+transition-property - Especifica o nome da propriedade CSS para a qual o efeito de transição é.
+transition-property: none|all|property|initial|inherit;
+
+transition-timing-function - Especifica a curva de velocidade do efeito de transição.
+    Essa propriedade permite que um efeito de transição mude a velocidade ao longo de sua duração.
+transition-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+↓
+ease - Igual a cubic-bezier(0.25, 0.1, 0.25, 1.0), o valor padrão, aumenta a velocidade no meio da transição, diminuindo a velocidade no final.
+linear - Igual a cubic-bezier(0.0, 0.0, 1.0, 1.0), transições a uma velocidade uniforme.
+ease-in - Igual a cubic-bezier(0.42, 0, 1.0, 1.0), inicia lentamente, com a velocidade de transição aumentando até a conclusão.
+ease-out - Igual a cubic-bezier(0, 0, 0.58, 1.0), inicia a transição rapidamente, diminuindo a velocidade da transição final/continua. •
+ease-in-out - Igual a cubic-bezier(0.42, 0, 0.58, 1.0), inicia e finaliza a transição lentamente.
+cubic-bezier (x1, y1, x2, y2) - x1, y1, x2, y2 Necessário. Valores numéricos. x1 e x2 devem ser um número de 0 a 1.
+    x1 e x2 são progreçoes do início e do fim da curva e, no CSS, esses pontos são fixos, pois as coordenadas são proporções. 
+    y1 e y2 sao tempo inicial e tempo final.
+    A função cubic-bezier () pode ser usada com a propriedade animation-timing-function e a propriedade transit-timing-function. 
+
+
+↓
+steps( n, <jumpterm>) - Exibe a transição ao longo de n paradas ao longo da transição, exibindo cada parada por períodos iguais.
+    jump-start / start - Indica uma função contínua esquerda, para que o primeiro salto aconteça quando a transição começa;
+    jump-end / end - Indica uma função contínua à direita, para que o último salto aconteça quando a animação terminar;
+    jump-none - Não há salto em ambos os lados. Em vez disso, mantendo a marca de 0% e a marca de 100%, cada uma por 1 / n da duração
+    jump-both - Inclui pausas nas marcas de 0% e 100%, adicionando efetivamente uma etapa durante o tempo de transição.
+↓
+step-start - Igual a steps(1, jump-start).
+step-end - Igual a steps(1, jump-end).
+initial- Define esta propriedade como seu valor padrão.
+inherit - herda essa propriedade de seu elemento pai.
+
+Dica: Um efeito de transição normalmente pode ocorrer quando um usuário passa o mouse sobre um elemento.
+Nota: Sempre especifique a propriedade transition-duration , caso contrário, a duração é 0s e a transição não terá efeito.
+*/
+
+p {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 5px;
+    text-align: center;
+    /*  transition: property duration timing-function delay */
+}
+p:hover {
+    width: 400px;
+    background-color: tomato;
+    color: #ffffff;
+}
+
+#p1 {
+    transition: 1s ease 1s;    
+}
+#p2 {
+    transition-duration: 2s;
+    transition-timing-function: steps(10 , end);
+}
+#p3 {
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+#p4 {
+    transition: 1s cubic-bezier(1, 0, 0, 1);
+    /*           cubic-bezier (x1, y1, x2, y2) */
+}
+#p5 {
+    transition: height 2s , width 1s , font-size 2s;
+    /* transition: 1s; */
+}
+    #p5:hover {
+        height: 100px;
+        /* width: 300px; */
+        font-size: 20px;
+    }
+
+img {
+    width: 350px;
+}
+#p6 {
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.6, 0, 0.3, 1);
+    /*                       cubic-bezier (x1, y1, x2, y2) */
+}
+
+#p7 {
+    transition: 1s linear , transform 0.5s;
+}
+    #p7:hover {
+       transform: rotate(180deg); 
+    }

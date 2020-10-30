@@ -1,0 +1,55 @@
+/* 
+configura o espaçamento interno dos elementos.
+
+padding: uma propriedade abreviada para todas as propriedades padding- *.
+padding-bottom: define o preenchimento inferior de um elemento.
+padding-left: define o preenchimento esquerdo de um elemento.
+padding-right: define o preenchimento correto de um elemento :.
+padding-top: define o preenchimento superior de um elemento.
+*/
+/* 
+    padding-top: length|%|initial|inherit;
+    padding-right: length|%|initial|inherit;
+    padding-bottom: length|%|initial|inherit;
+    padding-left: length|%|initial|inherit;
+
+    padding: 10px 5px 15px 20px;
+*/
+
+body {
+    margin: 0px;
+}
+
+div {
+    border: 2px solid #000000;
+    margin: 50px;
+    padding: 20px;
+    
+}
+
+
+p {
+    border: 2px solid #ff0000;
+    margin: 50px 0px 100px 100px;
+    /*       T    R    B    L  */
+    text-align: center;
+    padding: 30px 5px 20px 15px;
+}
+
+#pp {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    text-align: right;
+}
+
+.dd {
+    width: 300px;
+    height: 100px;
+    margin: auto;
+}
+
+.dd p {
+    width: 200px;
+    margin: auto;    
+}
